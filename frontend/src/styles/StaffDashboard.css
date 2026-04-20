@@ -1,0 +1,82 @@
+@import './AdminDashboard.css';
+
+.staff-dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #eef6ff 100%);
+}
+
+.staff-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #0b1324;
+  color: #fff;
+}
+
+.staff-content {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: calc(100vh - 68px);
+}
+
+.staff-sidebar {
+  background: #0f172a;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.staff-main-content {
+  padding: 1.25rem;
+}
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.package-type {
+  color: #475569;
+  font-weight: 600;
+}
+
+.package-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.package-price span {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.package-details {
+  padding-left: 1.2rem;
+  margin: 0.7rem 0;
+}
+
+.package-description {
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .staff-content {
+    grid-template-columns: 1fr;
+  }
+
+  .staff-sidebar {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+}
